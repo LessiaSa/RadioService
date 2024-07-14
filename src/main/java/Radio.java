@@ -53,9 +53,9 @@ public class Radio {
     }
 
     public void reducingVolume() {
-        if (currentVolume >0) {
-            currentVolume --;
-        }
+        if (currentVolume > 0) {
+            currentVolume--;
         }
     }
+}
 

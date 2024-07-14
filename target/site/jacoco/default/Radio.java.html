@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Radio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">RadioService</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Radio.java</span></div><h1>Radio.java</h1><pre class="source lang-java linenums"><span class="fc" id="L1">public class Radio {</span>
+    private int currentVolume;
+    private int currentStation;
+
+    public int getCurrentVolume() {
+<span class="fc" id="L6">        return currentVolume;</span>
+    }
+
+    public int getCurrentStation() {
+<span class="fc" id="L10">        return currentStation;</span>
+    }
+
+    public void setCurrentVolume(int newCurrentVolume) {
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if (newCurrentVolume &gt; 100) {</span>
+<span class="fc" id="L15">            return;</span>
+        }
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (newCurrentVolume &lt; 0) {</span>
+<span class="fc" id="L18">            return;</span>
+        }
+<span class="fc" id="L20">        currentVolume = newCurrentVolume;</span>
+<span class="fc" id="L21">    }</span>
+
+    public void setCurrentStation(int newCurrentStation) {
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (newCurrentStation &gt; 9) {</span>
+<span class="fc" id="L25">            return;</span>
+        }
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (newCurrentStation &lt; 0) {</span>
+<span class="fc" id="L28">            return;</span>
+        }
+<span class="fc" id="L30">        currentStation = newCurrentStation;</span>
+<span class="fc" id="L31">    }</span>
+
+    public void nextStation() {
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (currentStation == 9) {</span>
+<span class="fc" id="L35">            currentStation = 0;</span>
+        } else {
+<span class="fc" id="L37">            currentStation++;</span>
+        }
+<span class="fc" id="L39">    }</span>
+
+    public void prevStation() {
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (currentStation == 0) {</span>
+<span class="fc" id="L43">            currentStation = 9;</span>
+        } else {
+<span class="fc" id="L45">            currentStation--;</span>
+        }
+<span class="fc" id="L47">    }</span>
+
+    public void increaseVolume() {
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (currentVolume &lt; 100) {</span>
+<span class="fc" id="L51">            currentVolume++;</span>
+        }
+<span class="fc" id="L53">    }</span>
+
+    public void reducingVolume() {
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        if (currentVolume &gt;0) {</span>
+<span class="fc" id="L57">            currentVolume --;</span>
+        }
+<span class="fc" id="L59">        }</span>
+    }
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

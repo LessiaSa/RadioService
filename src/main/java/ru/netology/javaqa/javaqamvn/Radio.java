@@ -1,3 +1,5 @@
+package ru.netology.javaqa.javaqamvn;
+
 public class Radio {
     private int currentVolume;
     private int currentStation;

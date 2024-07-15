@@ -207,4 +207,13 @@ public class RadioServiceTest {
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void increaseVolumeMoreThanMaximum() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(101);
+        radio.increaseVolume();
+        int expected =1;
+        int actual =radio.getCurrentVolume();
+        Assertions.assertEquals(expected,actual);
+    }
 }
